@@ -37,7 +37,7 @@ const AnimalShelter = Object.create({}, {
 const Programming = (company,employmentStart, employmentEnd)   => {  
     let newJob = Object.create({}, {
         business: {
-            value: something
+            value: company
         },
         StartDate: {
             value: employmentStart
@@ -51,12 +51,12 @@ const Low = Programming ("NSS", "02-77-22", "99-22-22")
 
 console.log(Low);
 
-const jobArray = [HaddonMotors,AnimalShelter,Programming]
+const jobArray = [HaddonMotors,AnimalShelter,Low]
 
 for (let i = 0; i < jobArray.length; i++) {
 
     const article = document.createElement('article');
     article.setAttribute('id', jobArray[i].business);
     document.querySelector('#contain').appendChild(article);
-
+    console.log(jobArray[i])
 }
